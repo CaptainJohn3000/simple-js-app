@@ -29,7 +29,7 @@ for (let i = 0; i < pokemonList.length; i++) {
   );
 }
 
-/// Template Literal: `${}`
+/// Template Literal: `${}` <-- BACKTICKS used, not apostrophe
 // Ternary: question ? yes : no  (x < 100 ? true : false) Replaced " if else statments"
 
 // " " + pokemonList[i].name + " (Height: " + pokemonList[i].height + " m)"
