@@ -1,3 +1,4 @@
+// IIFE Array of Pokemon (objects)
 let pokemonRepository = (function () {
   let pokemonList = [
     {
@@ -17,36 +18,47 @@ let pokemonRepository = (function () {
     },
   ];
 
-  function getAll() {
-    return pokemonList;
-  }
-
+  // Add Pokemon to the Pokemon List
   function add(pokemon) {
     pokemonList.push(pokemon);
   }
 
+  // Get all Pokemon from the Pokemon List
+  function getAll() {
+    return pokemonList;
+  }
+
+  // Print pokemon details to the console
+  function showDetails(pokemon) {
+    console.log(pokemon);
+  }
+
+  // Add buttons to the list items & add list items to unordered pokemon list
+  function addListItem(pokemon) {
+    let pokemonList = document.querySelector(".pokemon-list");
+    let listpokemon = document.createElement("li");
+    let button = document.createElement("button");
+    button.innerText = pokemon.name;
+    button.classList.add("button-class");
+    listpokemon.appendChild(button);
+    pokemonList.appendChild(listpokemon);
+    // Event Listener for click
+    button.addEventListener("click", function () {
+      showDetails(pokemon);
+    });
+  }
+
   return {
-    getAll: getAll,
     add: add,
+    getAll: getAll,
+    showDetails: showDetails,
+    addListItem: addListItem,
   };
 })();
 
-pokemonRepository.getAll().forEach(function (pokemon) {
-  console.log(
-    pokemon.name +
-      " is " +
-      pokemon.height +
-      "m tall, and " +
-      pokemon.type +
-      " type Pokemon!"
-  );
-});
+console.log(pokemonRepository.getAll());
 
-// pokemonList.forEach(function (pokemon) {
-// console.log(
-// pokemon.name +
-// " is " +
-// pokemon.height +
-// "m tall, and " +
-// pokemon.type +
-// " type Pokemon!");
+// Loop to iterate over array of Pokemon (objects) and add Pokemon to Pokemon List item
+pokemonRepository.getAll().forEach(function (pokemon) {
+  pokemonRepository.addListItem(pokemon);
+});
