@@ -1,6 +1,9 @@
 // IIFE Array of Pokemon (objects)
+
+// Creating an array for pokemon objects that contains pokemon data
 let pokemonRepository = (function () {
   let pokemonList = [];
+  // API link below
   let apiUrl = "https://pokeapi.co/api/v2/pokemon/";
 
   // Add Pokemon to the Pokemon List
@@ -12,7 +15,7 @@ let pokemonRepository = (function () {
     }
   }
 
-  // Get all Pokemon from the Pokemon List
+  // Allows access to print pokemonList
   function getAll() {
     return pokemonList;
   }
@@ -20,7 +23,9 @@ let pokemonRepository = (function () {
   // Add buttons to the list items & add list items to unordered pokemon list
   function addListItem(pokemon) {
     let pokemonList = document.querySelector(".pokemon-list");
+    // Creating a list item
     let listpokemon = document.createElement("li");
+    // Creates a button element
     let button = document.createElement("button");
     button.innerText = pokemon.name;
     button.classList.add("button-class");
@@ -32,6 +37,7 @@ let pokemonRepository = (function () {
     });
   }
 
+  // Load data from API
   function loadList() {
     return fetch(apiUrl)
       .then(function (response) {
@@ -52,7 +58,7 @@ let pokemonRepository = (function () {
       });
   }
 
-  // Print pokemon details to the console
+  // Loads details
   function loadDetails(item) {
     let url = item.detailsUrl;
     return fetch(url)
