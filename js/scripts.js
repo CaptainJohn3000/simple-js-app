@@ -84,10 +84,13 @@ let pokemonRepository = (function () {
 
   // SHOW THE MODAL & DETAILS
   let modalContainer = document.querySelector("#modal-container");
+
   function showModal(item) {
     modalContainer.innerHTML = "";
+
     let modal = document.createElement("div");
     modal.classList.add("modal");
+
     let closeButtonElement = document.createElement("button");
     closeButtonElement.classList.add("modal-close");
     closeButtonElement.innerText = "Close";
@@ -95,8 +98,10 @@ let pokemonRepository = (function () {
 
     let nameElement = document.createElement("h1");
     nameElement.innerText = item.name;
+
     let heightElement = document.createElement("p");
     heightElement.innerHTML = "Height: " + item.height + "m";
+
     let imageElement = document.createElement("img");
     imageElement.src = item.imageUrl;
 
