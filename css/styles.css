@@ -1,81 +1,69 @@
-html,
+/* 
+
+Body Font: "Courier New" with monospace ("Courier New", monospace;);
+Button Focus Color: #ffcb05;
+Nav Color: #ffcb05;
+List Group Item Color: #2a75bb;
+Button Back-ground Color: white;
+
+
+
+
+
+*/
+
+* {
+  box-sizing: border-box;
+}
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Courier New", monospace;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 1.4;
 }
-
-#modal-container {
-  position: fixed;
-  padding: 20px;
-  box-sizing: border-box;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-
-  /* to show it above other content */
-  z-index: 999;
-
-  /* to allow scrolling if the screen is not high enough*/
-  overflow: auto;
-
-  /* this is used to center the modal */
-  display: grid;
-  text-align: center;
-}
-
-.modal {
-  margin: auto;
-  display: inline-block;
-  box-sizing: border-box;
-  background: #fff;
-  padding: 15px;
-  width: 100%;
-  max-width: 700px;
-  text-align: left;
-}
-
-.modal-close {
-  float: right;
-  -webkit-appearance: none;
-  border: 0;
-  background: none;
-  color: #777;
-  text-decoration: underline;
+.button:hover,
+.button:focus {
   cursor: pointer;
-}
-
-.modal h1 {
-  margin-top: 0;
-}
-
-.modal p {
-  margin-bottom: 0;
-}
-
-#modal-container {
-  display: none;
-}
-
-#modal-container.is-visible {
-  /* CSS for modal container - add your own desired CSS styles here */
-  display: block;
-}
-
-.button-class {
-  background-color: #4caf50; /* Green */
-  border: none;
-  color: white;
-  padding: 16px 32px;
+  transition-duration: 0.8s;
+  -webkit-transition-duration: 0.8s;
+  background-color: #ffcb05;
+  padding: 18px 18px;
   text-align: center;
-  text-decoration: none;
   display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  -webkit-transition-duration: 0.4s; /* Safari */
-  transition-duration: 0.4s;
-  cursor: pointer;
+  margin: 5px 5px;
+}
+
+.button {
   background-color: white;
-  color: black;
-  border: 2px solid #4caf50;
+  border-radius: 25px;
+  border: 2px solid black;
+  padding: 10px;
+  width: 175px;
+  height: 50px;
+}
+
+.close {
+  font-size: 45px;
+}
+
+.list-group-item {
+  background-color: #2a75bb;
+  text-align: center;
+  position: relative;
+}
+
+.modal-body {
+  margin: auto;
+  box-sizing: border-box;
+  background: white;
+  padding: 0;
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+  min-height: 400px;
+}
+
+.navbar {
+  background-color: #ffcb05;
 }
