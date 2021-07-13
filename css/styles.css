@@ -78,6 +78,7 @@ body {
 ul {
   max-width: 50%;
   margin: auto;
+  justify-content: center;
 }
 
 
