@@ -10,24 +10,37 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="dist/styles.min.css" />
   </head>
   <body>
     <header>
-      <nav class="navbar">
-        <a class="navbar-brand" href="index.html">
+      <nav class="navbar justify-content-center">
+        <a class="navbar-brand">
+          <img
+          src="img/blastoise.png"
+          class="logo-blast"
+          width="200"
+          height="200"
+          alt="Blastoiselogo"
+          >
           <img
             src="img/Pokemon-logo1.png"
-            class="d-inline-block align-top"
+            class="logo"
             width="200"
             height="200"
             alt="Pokemonlogo"
           />
+          <img src="img/charizard.png"
+          class="logo-char"
+          width="200"
+          height="200"
+          alt="Charizardlogo"
+          >
         </a>
       </nav>
     </header>
     <main>
-      <ul class="list-group" id="list-group"></ul>
+      <ul class="list-group flex-row flex-wrap border-0" id="list-group"></ul>
 
       <!-- Modal -->
       <div
@@ -76,6 +89,6 @@
     <!--Poly Fills:-->
     <script src="js/promise-polyfill.js"></script>
     <script src="js/fetch-polyfill.js"></script>
-    <script src="js/scripts.js"></script>
+    <script src="dist/scripts.min.js"></script>
   </body>
 </html>
