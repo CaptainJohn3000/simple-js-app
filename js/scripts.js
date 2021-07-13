@@ -30,6 +30,7 @@ let pokemonRepository = (function () {
 
     let listItem = document.createElement("li");
     listItem.classList.add("list-group-item");
+    listItem.classList.add("border-0");
 
     let button = document.createElement("button");
     button.innerText = pokemon.name;
@@ -143,6 +144,7 @@ let pokemonRepository = (function () {
     modalBody.append(typeElement);
     modalBody.append(abilitiesElement);
   }
+
 
   return {
     add: add,
